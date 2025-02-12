@@ -88,6 +88,8 @@ def uninstallApp():
 
 while True:
     try:     
+        Logging.Info("Waiting For Device")
+        os.system("adb wait-for-any-device")
         os.system("cls && adb devices")
         os.system('adb shell getprop ro.product.odm.model')
         print(menu)
